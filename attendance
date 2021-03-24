@@ -1,0 +1,77 @@
+-- MySQL dump 10.16  Distrib 10.1.45-MariaDB, for debian-linux-gnueabihf (armv7l)
+--
+-- Host: localhost    Database: attendance
+-- ------------------------------------------------------
+-- Server version	10.1.45-MariaDB-0+deb9u1
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `attendance`
+--
+
+DROP TABLE IF EXISTS `attendance`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `attendance` (
+  `RFID` int(11) NOT NULL AUTO_INCREMENT,
+  `Name` varchar(255) DEFAULT NULL,
+  `Time` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`RFID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `attendance`
+--
+
+LOCK TABLES `attendance` WRITE;
+/*!40000 ALTER TABLE `attendance` DISABLE KEYS */;
+/*!40000 ALTER TABLE `attendance` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `students`
+--
+
+DROP TABLE IF EXISTS `students`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `students` (
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `RFID` varchar(255) DEFAULT NULL,
+  `Name` varchar(255) DEFAULT NULL,
+  `Time` datetime DEFAULT NULL,
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB AUTO_INCREMENT=49 DEFAULT CHARSET=utf8mb4;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `students`
+--
+
+LOCK TABLES `students` WRITE;
+/*!40000 ALTER TABLE `students` DISABLE KEYS */;
+INSERT INTO `students` VALUES (4,'794986066639','ll                              ','2021-03-16 11:55:49'),(5,'794986066639','ll                                              ','2021-03-16 11:56:26'),(6,'794986066639','ll                                              ','2021-03-16 11:56:28'),(7,'794986066639','ll                                              ','2021-03-16 11:56:29'),(8,'794986066639','ll                                              ','2021-03-16 11:57:49'),(9,'794986066639','ll                                              ','2021-03-16 11:57:49'),(10,'657402599727','llll                                            ','2021-03-17 12:32:26'),(11,'657402599727','llll                                            ','2021-03-17 12:32:38'),(12,'657402599727','llll                                            ','2021-03-17 12:33:08'),(13,'657402599727','llll                                            ','2021-03-17 12:35:38'),(14,'657402599727','llll                                            ','2021-03-17 12:35:45'),(15,'657402599727','llll                                            ','2021-03-17 12:35:47'),(16,'657402599727','llll                                            ','2021-03-17 12:35:49'),(17,'657402599727','llll                                            ','2021-03-17 12:35:52'),(18,'657402599727','llll                                            ','2021-03-17 12:35:54'),(19,'657402599727','llll                                            ','2021-03-17 12:37:49'),(20,'657402599727','llll                                            ','2021-03-17 12:38:34'),(21,'657402599727','llll                                            ','2021-03-17 12:38:53'),(22,'657402599727','llll                                            ','2021-03-17 12:38:55'),(23,'657402599727','llll                                            ','2021-03-17 12:38:57'),(24,'657402599727','llll                                            ','2021-03-17 12:39:00'),(25,'657402599727','llll                                            ','2021-03-17 12:39:05'),(26,'657402599727','llll                                            ','2021-03-17 12:39:07'),(27,'657402599727','llll                                            ','2021-03-17 12:39:11'),(28,'657402599727','llll                                            ','2021-03-17 12:39:14'),(29,'657402599727','llll                                            ','2021-03-17 12:39:31'),(30,'657402599727','llll                                            ','2021-03-17 12:39:35'),(31,'657402599727','llll                                            ','2021-03-17 12:39:38'),(32,'657402599727','llll                            ','2021-03-17 12:41:31'),(33,'657402599727','llll                                            ','2021-03-17 12:41:37'),(34,'657402599727','llll                                            ','2021-03-17 12:41:39'),(35,'657402599727','llll                                            ','2021-03-17 12:41:44'),(36,'657402599727','llll                                            ','2021-03-17 12:42:09'),(37,'657402599727','llll                                            ','2021-03-17 12:42:15'),(38,'657402599727','llll                                            ','2021-03-17 12:42:18'),(39,'657402599727','llll                                            ','2021-03-17 12:42:38'),(40,'657402599727','llll                                            ','2021-03-17 12:43:28'),(41,'657402599727','llll                                            ','2021-03-17 12:43:54'),(42,'794986066639','ll                                              ','2021-03-17 12:44:05'),(43,'657402599727','llll                                            ','2021-03-17 12:44:09'),(44,'794986066639','ll                                              ','2021-03-17 12:44:12'),(45,'794986066639','ll                                              ','2021-03-17 12:44:38'),(46,'657402599727','llll                                            ','2021-03-17 16:34:16'),(47,'657402599727','llll                                            ','2021-03-17 16:51:51'),(48,'657402599727','llll                                            ','2021-03-17 16:51:54');
+/*!40000 ALTER TABLE `students` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2021-03-24 12:00:34
